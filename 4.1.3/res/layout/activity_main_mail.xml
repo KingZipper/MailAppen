@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".MainMail" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:padding="5dp" >
+        <EditText
+            android:id="@+id/emailAdressTextEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:hint="Enter E-Mail adress"
+            android:inputType="textEmailAddress"
+            android:singleLine="true" />
+        <EditText
+            android:id="@+id/emailSubjectTextEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailAdressTextEdit"
+            android:layout_margin="5dp"
+            android:hint="Enter Subject"
+            android:singleLine="true" />
+        <EditText
+            android:id="@+id/messageTextEdit"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/emailSubjectTextEdit"
+            android:layout_margin="5dp"
+            android:gravity="top|left"
+            android:hint="Type text here"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/buttonAttachment"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="5dp"
+            android:text="Send" />
+
+        <Button
+            android:id="@+id/buttonAttachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/messageTextEdit"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="268dp"
+            android:text="attachment" />
+
+        <ImageView
+            android:id="@+id/theImageView"
+            android:layout_width="224dp"
+            android:layout_height="141dp"
+            android:layout_below="@+id/messageTextEdit"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="13dp"
+            android:layout_weight="9"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
